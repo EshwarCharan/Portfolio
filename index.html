@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshwar Charan Adluri | MCA · ML Developer · Python Engineer</title>
+    <meta name="description" content="Portfolio of Eshwar Charan Adluri — MCA student at Kakatiya University, Python & ML developer from Hanamkonda, Telangana.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="star-canvas"></canvas>
+
+<div id="preloader">
+    <div class="loader-wrap">
+        <div class="loader-bar"></div>
+    </div>
+    <p class="preloader-text">Initializing...</p>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- HEADER -->
+<header class="header">
+    <a href="#home" class="logo">AEC<span class="logo-accent">.</span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+        <button class="theme-btn" aria-label="Toggle theme"><i class="bx bx-sun"></i></button>
+    </div>
+</header>
+
+<!-- HOME -->
+<section class="home" id="home">
+    <div class="home-content">
+        <div class="home-badge"><span class="pulse-dot"></span>Available for opportunities</div>
+        <h1><span class="gradient-text">Eshwar Charan</span><br>Adluri</h1>
+        <p class="role-line">I'm a <span class="multiple-text"></span></p>
+        <p class="home-desc">MCA student at Kakatiya University, Hanamkonda. I build intelligent web applications and ML systems — from AI-powered greenwashing detection to fraud prediction engines.</p>
+        <div class="home-actions">
+            <a href="https://drive.google.com/uc?export=download&id=1KGTxeLn3pdKvipq6t_yT7hW9FuyhvZyN" target="_blank" class="btn btn-primary"><i class="bx bx-download"></i> Download CV</a>
+            <a href="#portfolio" class="btn btn-ghost"><i class="bx bx-code-block"></i> View Projects</a>
+        </div>
+        <div class="socials">
+            <a href="https://github.com/EshwarCharan" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/eshwar-charan-adluri-456861269" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a href="mailto:eshwaradluri20@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+            <a href="tel:+917337586107" aria-label="Phone"><i class="bx bx-phone"></i></a>
+        </div>
+    </div>
+
+    <!-- NO IMAGE: replaced with animated code terminal -->
+    <div class="home-visual">
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring2"></div>
+        <div class="terminal-card">
+            <div class="terminal-header">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+                <span class="t-title">eshwar@portfolio:~</span>
+            </div>
+            <div class="terminal-body" id="terminal-body"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="about-visual">
+        <!-- NO IMAGE: replaced with animated initials + orbiting skills -->
+        <div class="avatar-orb">
+            <div class="orb-inner">
+                <span class="orb-initials">EC</span>
+                <div class="orb-ring r1"></div>
+                <div class="orb-ring r2"></div>
+                <div class="orb-ring r3"></div>
+                <span class="orb-tag tag-1">Python</span>
+                <span class="orb-tag tag-2">ML</span>
+                <span class="orb-tag tag-3">Flask</span>
+                <span class="orb-tag tag-4">React</span>
+                <span class="orb-tag tag-5">Django</span>
+                <span class="orb-tag tag-6">NLP</span>
+            </div>
+        </div>
+        <div class="stat-cards">
+            <div class="stat-card"><div class="num">3+</div><div class="lbl">Projects</div></div>
+            <div class="stat-card"><div class="num">5+</div><div class="lbl">Years Learning</div></div>
+        </div>
+    </div>
+
+    <div class="about-content">
+        <span class="section-label">About Me</span>
+        <h2 class="heading left">Passionate about <span>intelligent systems</span></h2>
+        <p class="about-sub">Python Developer · ML Engineer · Backend Dev</p>
+        <p>I'm pursuing my Master of Computer Applications (MCA) at Kakatiya University, Hanamkonda, building on a BCA from Vaagdevi Degree & PG College (CGPA 7.9). I thrive at the intersection of Machine Learning, Web Development, and Backend Engineering.</p>
+        <p>From building an AI greenwashing detector for CSR reports to an expense fraud detection system with real-time ML analytics, every project I build is aimed at solving a real-world problem. My goal: become a Machine Learning Cloud Architect.</p>
+        <div class="about-tags">
+            <span class="tag">Python</span><span class="tag">Machine Learning</span>
+            <span class="tag">Flask / Django</span><span class="tag">React.js</span>
+            <span class="tag">SQL</span><span class="tag">Git</span>
+            <span class="tag">NLP</span><span class="tag">Android (Java)</span>
+            <span class="tag">Cloud (Learning)</span>
+        </div>
+        <div class="github-stats-card">
+            <div class="gh-header">
+                <i class="bx bxl-github gh-icon"></i>
+                <span class="gh-username">EshwarCharan</span>
+                <a href="https://github.com/EshwarCharan" target="_blank" class="gh-link">View Profile <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="gh-stats">
+                <div class="gh-stat"><i class="bx bx-git-repo-forked"></i><div><span class="gh-num">3</span><span class="gh-lbl">Repositories</span></div></div>
+                <div class="gh-stat"><i class="bx bx-code-alt"></i><div><span class="gh-num">Python</span><span class="gh-lbl">Top Language</span></div></div>
+                <div class="gh-stat"><i class="bx bx-star"></i><div><span class="gh-num">ML / Web</span><span class="gh-lbl">Focus Area</span></div></div>
+            </div>
+            <div class="gh-langs">
+                <div class="gh-lang-bar">
+                    <div style="width:55%;background:#3572A5" title="Python 55%"></div>
+                    <div style="width:20%;background:#f1e05a" title="JavaScript 20%"></div>
+                    <div style="width:15%;background:#b07219" title="Java 15%"></div>
+                    <div style="width:10%;background:#e34c26" title="HTML 10%"></div>
+                </div>
+                <div class="gh-lang-legend">
+                    <span><i style="background:#3572A5"></i>Python 55%</span>
+                    <span><i style="background:#f1e05a"></i>JavaScript 20%</span>
+                    <span><i style="background:#b07219"></i>Java 15%</span>
+                    <span><i style="background:#e34c26"></i>HTML 10%</span>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <a href="#contact" class="btn btn-primary" style="width:fit-content;"><i class="bx bx-rocket"></i> Let's Connect</a>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="services" id="services">
+    <span class="section-label center">What I Know</span>
+    <h2 class="heading">Technical <span>Skills</span></h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="skill-icon"><i class="bx bx-code-alt"></i></div>
+            <h3>Web Development</h3>
+            <p>Building responsive, modern UIs and full-stack web applications with clean code.</p>
+            <div class="bar-list">
+                <div class="bar-item"><div class="bar-meta"><span>HTML &amp; CSS</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>JavaScript</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-w="65"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>React.js</span><span>60%</span></div><div class="bar-track"><div class="bar-fill" data-w="60"></div></div></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon"><i class="bx bx-brain"></i></div>
+            <h3>Machine Learning</h3>
+            <p>Designing and training models for classification, NLP, and fraud detection tasks.</p>
+            <div class="bar-list">
+                <div class="bar-item"><div class="bar-meta"><span>Python</span><span>82%</span></div><div class="bar-track"><div class="bar-fill" data-w="82"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>NumPy / Pandas</span><span>76%</span></div><div class="bar-track"><div class="bar-fill" data-w="76"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>Scikit-learn / NLP</span><span>68%</span></div><div class="bar-track"><div class="bar-fill" data-w="68"></div></div></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-icon"><i class="bx bxs-data"></i></div>
+            <h3>Backend Development</h3>
+            <p>Robust APIs, database design, and server-side logic with Python frameworks.</p>
+            <div class="bar-list">
+                <div class="bar-item"><div class="bar-meta"><span>Flask / Django</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-w="70"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>MySQL / SQLite</span><span>74%</span></div><div class="bar-track"><div class="bar-fill" data-w="74"></div></div></div>
+                <div class="bar-item"><div class="bar-meta"><span>Git / GitHub</span><span>78%</span></div><div class="bar-track"><div class="bar-fill" data-w="78"></div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+    <span class="section-label center">Academic Journey</span>
+    <h2 class="heading">My <span>Education</span></h2>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2024 – 2026</p>
+                <h3>Master of Computer Applications (MCA)</h3>
+                <p class="tl-inst">Kakatiya University, Hanamkonda, Telangana</p>
+                <p class="tl-grade">Currently Pursuing</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2021 – 2024</p>
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p class="tl-inst">Vaagdevi Degree &amp; PG College, Hanamkonda</p>
+                <p class="tl-grade">CGPA: 7.9</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2019 – 2021</p>
+                <h3>Intermediate — MPC</h3>
+                <p class="tl-inst">Nava Vignana Bharathi Junior College, Hanamkonda</p>
+                <p class="tl-grade">71%</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+                <p class="tl-year">2018 – 2019</p>
+                <h3>SSC (10th Grade)</h3>
+                <p class="tl-inst">Rishi High School, Warangal</p>
+                <p class="tl-grade">GPA: 8.2</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements" id="achievements">
+    <span class="section-label center">Recognition</span>
+    <h2 class="heading">Achievements &amp; <span>Highlights</span></h2>
+    <div class="ach-grid">
+        <div class="ach-card">
+            <div class="ach-icon"><i class="bx bx-trophy"></i></div>
+            <div>
+                <h3>GeeksforGeeks ML Hackathon — Final Round</h3>
+                <p>Selected for the final round of the Machine Learning and AI Hackathon organized by GeeksforGeeks in collaboration with Anurag University. Awarded a certificate of participation.</p>
+            </div>
+        </div>
+        <div class="ach-card">
+            <div class="ach-icon"><i class="bx bx-microphone"></i></div>
+            <div>
+                <h3>Live Presentation — Technophilia 2025</h3>
+                <p>Delivered a live demo of an AI-powered Applicant Tracking System at Technophilia 2025, hosted by Vaagdevi Degree &amp; PG College, Hanamkonda.</p>
+            </div>
+        </div>
+        <div class="ach-card">
+            <div class="ach-icon"><i class="bx bx-leaf"></i></div>
+            <div>
+                <h3>Green Guard — AI Greenwashing Detector</h3>
+                <p>Built an end-to-end AI web app with PDF analysis, authenticity scoring, and QR-based certificate verification for detecting greenwashing in CSR reports.</p>
+            </div>
+        </div>
+        <div class="ach-card">
+            <div class="ach-icon"><i class="bx bx-shield-alt-2"></i></div>
+            <div>
+                <h3>AI TechFec — Fraud Detection System</h3>
+                <p>Developed a full-stack ML application with real-time fraud prediction, smart financial insights, and PDF reports using React.js, Django, and ML models.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+    <span class="section-label center">Work</span>
+    <h2 class="heading">Featured <span>Projects</span></h2>
+    <div class="filter-row">
+        <button class="f-btn active" data-filter="all">All</button>
+        <button class="f-btn" data-filter="ml">Machine Learning</button>
+        <button class="f-btn" data-filter="web">Web</button>
+        <button class="f-btn" data-filter="android">Android</button>
+    </div>
+    <div class="proj-grid">
+
+        <!-- Card: Attendance -->
+        <div class="proj-card" data-cat="android">
+            <div class="proj-visual pv-android">
+                <canvas class="proj-canvas" data-type="android"></canvas>
+                <div class="proj-glow"></div>
+            </div>
+            <div class="proj-body">
+                <span class="proj-tag">Android · Java</span>
+                <h3>Attendance Manager</h3>
+                <p>Android app for teachers and HODs to manage and track student attendance with role-based access control.</p>
+                <div class="proj-stack">
+                    <span>Java</span><span>XML</span><span>SQLite</span><span>Android Studio</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/EshwarCharan/Student-attendance-management-system.git" target="_blank"><i class="bx bxl-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: Green Guard -->
+        <div class="proj-card" data-cat="ml">
+            <div class="proj-visual pv-ml">
+                <canvas class="proj-canvas" data-type="ml"></canvas>
+                <div class="proj-glow"></div>
+            </div>
+            <div class="proj-body">
+                <span class="proj-tag">ML · NLP · Web</span>
+                <h3>Green Guard</h3>
+                <p>AI-powered greenwashing detection for CSR reports with NLP pipeline, authenticity scoring, and QR certificate verification.</p>
+                <div class="proj-stack">
+                    <span>Python</span><span>Flask</span><span>NLP</span><span>SQLite</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/EshwarCharan/GREENGUARD.git" target="_blank"><i class="bx bxl-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: AI TechFec -->
+        <div class="proj-card" data-cat="ml">
+            <div class="proj-visual pv-fraud">
+                <canvas class="proj-canvas" data-type="fraud"></canvas>
+                <div class="proj-glow"></div>
+            </div>
+            <div class="proj-body">
+                <span class="proj-tag">ML · Full-Stack</span>
+                <h3>AI TechFec</h3>
+                <p>Full-stack fraud detection platform with real-time ML analytics, smart financial insights, and automated PDF reports.</p>
+                <div class="proj-stack">
+                    <span>React.js</span><span>Django</span><span>ML Models</span><span>MySQL</span>
+                </div>
+                <div class="proj-links">
+                    <a href="https://github.com/EshwarCharan/AI-TechFec.git" target="_blank"><i class="bx bxl-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <span class="section-label center">Get In Touch</span>
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <div class="contact-wrap">
+        <div class="contact-info">
+            <h3>Let's build something great together</h3>
+            <p>I'm open to internships, freelance projects, collaborations, and full-time roles in ML, backend, or full-stack development.</p>
+            <div class="contact-items">
+                <div class="c-item"><i class="bx bx-envelope"></i><div><span>Email</span><span>eshwaradluri20@gmail.com</span></div></div>
+                <div class="c-item"><i class="bx bx-phone"></i><div><span>Phone</span><span>+91 7337586107</span></div></div>
+                <div class="c-item"><i class="bx bx-map"></i><div><span>Location</span><span>Hanamkonda, Telangana, India</span></div></div>
+                <div class="c-item"><i class="bx bxl-github"></i><div><span>GitHub</span><span>github.com/EshwarCharan</span></div></div>
+                <div class="c-item"><i class="bx bxl-linkedin"></i><div><span>LinkedIn</span><span>linkedin.com/in/eshwar-charan-adluri-456861269</span></div></div>
+            </div>
+        </div>
+        <form name="contact-form">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-row">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Subject">
+            </div>
+            <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary"><i class="bx bx-send"></i> Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p class="footer-text">Copyright &copy; 2026 by <span>Eshwar Charan Adluri</span> — All Rights Reserved.</p>
+    <a href="#home" class="back-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+</footer>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
