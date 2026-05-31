@@ -352,3 +352,37 @@ ScrollReveal().reveal('.ach-card',      { origin: 'bottom', interval: 150 });
 ScrollReveal().reveal('.proj-card',     { origin: 'bottom', interval: 100 });
 ScrollReveal().reveal('.contact-info',  { origin: 'left' });
 ScrollReveal().reveal('.contact form',  { origin: 'right' });
+
+// ===== PROJECT MODALS =====
+document.querySelectorAll('.proj-card[data-modal]').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Don't open modal if clicking GitHub link
+        if (e.target.closest('.proj-links')) return;
+        const id = card.dataset.modal;
+        const overlay = document.getElementById(id);
+        if (overlay) {
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Close on overlay click or X button
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeModal(overlay);
+    });
+    overlay.querySelector('.modal-close').addEventListener('click', () => closeModal(overlay));
+});
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
+    }
+});
+
+function closeModal(overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+}
