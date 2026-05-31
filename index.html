@@ -28,7 +28,7 @@
 
 <!-- HEADER -->
 <header class="header">
-    <a href="#home" class="logo">AEC<span class="logo-accent">.</span></a>
+    <a href="#home" class="logo">EC<span class="logo-accent">.</span></a>
     <i class="bx bx-menu" id="menu-icon"></i>
     <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -256,6 +256,7 @@
         <button class="f-btn" data-filter="ml">Machine Learning</button>
         <button class="f-btn" data-filter="web">Web</button>
         <button class="f-btn" data-filter="android">Android</button>
+        <button class="f-btn" data-filter="ai">Agentic AI</button>
     </div>
     <div class="proj-grid">
 
@@ -312,6 +313,26 @@
                 </div>
                 <div class="proj-links">
                     <a href="https://github.com/EshwarCharan/AI-TechFec.git" target="_blank"><i class="bx bxl-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card: LiveMind -->
+        <div class="proj-card" data-cat="ai" data-modal="modal-livemind" style="cursor:pointer;">
+            <div class="proj-visual pv-livemind">
+                <canvas class="proj-canvas" data-type="livemind"></canvas>
+                <div class="proj-glow"></div>
+                <div class="proj-coming-badge">In Development</div>
+            </div>
+            <div class="proj-body">
+                <span class="proj-tag">Agentic AI · LLM · Full-Stack</span>
+                <h3>LiveMind</h3>
+                <p>Real-time agentic AI research assistant with autonomous web search, semantic memory, and answer verification — comparable to a mini Perplexity AI.</p>
+                <div class="proj-stack">
+                    <span>React</span><span>FastAPI</span><span>LangGraph</span><span>Gemini</span><span>ChromaDB</span><span>Redis</span>
+                </div>
+                <div class="proj-links">
+                    <span class="proj-wip"><i class="bx bx-loader-alt"></i> Coming Soon</span>
                 </div>
             </div>
         </div>
@@ -484,6 +505,99 @@
     </div>
     <div class="modal-footer">
       <a href="https://github.com/EshwarCharan/Student-attendance-management-system.git" target="_blank" class="modal-btn orange"><i class="bx bxl-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- LiveMind Modal -->
+<div class="modal-overlay" id="modal-livemind">
+  <div class="modal modal-purple">
+    <button class="modal-close"><i class="bx bx-x"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon purple"><i class="bx bx-brain"></i></div>
+      <div>
+        <span class="modal-tag purple">Agentic AI · LLM · Full-Stack · In Development</span>
+        <h2>LiveMind</h2>
+        <p class="modal-subtitle">Real-Time Agentic AI Research Assistant with Memory, Web Intelligence & Answer Verification</p>
+      </div>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <h4><i class="bx bx-info-circle"></i> Overview</h4>
+        <p>LiveMind is an advanced AI-powered research assistant that bridges the gap between conventional chatbots and next-generation autonomous AI agents. Unlike traditional chatbots that rely solely on pre-trained knowledge, LiveMind actively searches the web, retrieves relevant information, remembers previous interactions, verifies facts, and delivers trustworthy responses with source citations.</p>
+        <p>Think of it as a personal mini version of Perplexity AI — built from scratch, combining LLMs, real-time web search, vector memory, and a verification engine into one seamless system.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4><i class="bx bx-error-circle"></i> Problem Being Solved</h4>
+        <div class="modal-features">
+          <div class="feat purple"><i class="bx bx-x-circle"></i>No real-time information in current chatbots</div>
+          <div class="feat purple"><i class="bx bx-x-circle"></i>AI hallucination & misinformation</div>
+          <div class="feat purple"><i class="bx bx-x-circle"></i>No long-term memory across sessions</div>
+          <div class="feat purple"><i class="bx bx-x-circle"></i>No answer verification or source transparency</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4><i class="bx bx-sitemap"></i> System Architecture</h4>
+        <div class="modal-arch">
+          <div class="arch-row">
+            <div class="arch-box purple">React Frontend</div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-row">
+            <div class="arch-box purple">FastAPI Backend</div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-row three">
+            <div class="arch-box purple-light">AI Agent<br><small>LangGraph</small></div>
+            <div class="arch-box purple-light">Memory<br><small>ChromaDB + Redis</small></div>
+            <div class="arch-box purple-light">Search<br><small>Tavily API</small></div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-row">
+            <div class="arch-box purple">Verification Engine</div>
+          </div>
+          <div class="arch-arrow">↓</div>
+          <div class="arch-row">
+            <div class="arch-box purple">Verified Response + Citations</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4><i class="bx bx-star"></i> Key Features</h4>
+        <div class="modal-features">
+          <div class="feat purple"><i class="bx bx-search-alt"></i>Real-time web search via Tavily API</div>
+          <div class="feat purple"><i class="bx bx-brain"></i>Agentic ReAct reasoning (Reason → Act → Observe)</div>
+          <div class="feat purple"><i class="bx bx-memory-card"></i>Short-term (Redis) + Long-term (ChromaDB) memory</div>
+          <div class="feat purple"><i class="bx bx-check-shield"></i>Verification engine — cross-checks before responding</div>
+          <div class="feat purple"><i class="bx bx-link"></i>Source citations & transparency on every response</div>
+          <div class="feat purple"><i class="bx bx-microphone"></i>Voice input via Web Speech API</div>
+          <div class="feat purple"><i class="bx bx-transfer"></i>Streaming responses (real-time token generation)</div>
+          <div class="feat purple"><i class="bx bx-docker"></i>Dockerized deployment on Railway/Render</div>
+        </div>
+      </div>
+
+      <div class="modal-section">
+        <h4><i class="bx bx-layer"></i> Modules</h4>
+        <div class="modal-steps">
+          <div class="step purple"><span>01</span><div><strong>UI Layer</strong><p>React + Tailwind + Framer Motion — chat interface, source panel, voice input, session history</p></div></div>
+          <div class="step purple"><span>02</span><div><strong>AI Agent Engine</strong><p>LangChain + LangGraph + Gemini API — query understanding, decision making, tool selection</p></div></div>
+          <div class="step purple"><span>03</span><div><strong>Web Search</strong><p>Tavily Search API — news, technical docs, research articles in real-time</p></div></div>
+          <div class="step purple"><span>04</span><div><strong>Memory System</strong><p>Redis (session) + ChromaDB (vector long-term) — context persistence across conversations</p></div></div>
+          <div class="step purple"><span>05</span><div><strong>Verification Engine</strong><p>Generate → Search Again → Compare Evidence → Verify → Return response</p></div></div>
+        </div>
+      </div>
+
+      <div class="modal-stack-row">
+        <span class="ms purple">React 18</span><span class="ms purple">FastAPI</span><span class="ms purple">LangChain</span><span class="ms purple">LangGraph</span><span class="ms purple">Gemini API</span><span class="ms purple">ChromaDB</span><span class="ms purple">Redis</span><span class="ms purple">Tavily</span><span class="ms purple">Docker</span><span class="ms purple">Python</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <span class="modal-btn purple" style="opacity:.7;cursor:default;"><i class="bx bx-loader-alt"></i> In Development — GitHub coming soon</span>
     </div>
   </div>
 </div>
