@@ -386,3 +386,80 @@ function closeModal(overlay) {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
 }
+
+// ===== LIVEMIND CANVAS =====
+function drawLivemindViz(ctx, w, h) {
+    ctx.clearRect(0, 0, w, h);
+
+    // Background grid
+    ctx.strokeStyle = 'rgba(167,139,250,0.06)';
+    ctx.lineWidth = 1;
+    for (let x = 0; x < w; x += 28) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
+    for (let y = 0; y < h; y += 28) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
+
+    // Animated ripple rings from center
+    const cx = w / 2, cy = h / 2;
+    const t = Date.now() / 1000;
+    [0, 0.4, 0.8].forEach((offset, i) => {
+        const phase = ((t * 0.5 + offset) % 1);
+        const r = phase * Math.min(w, h) * 0.45;
+        const alpha = (1 - phase) * 0.35;
+        ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(167,139,250,${alpha})`; ctx.lineWidth = 1.5; ctx.stroke();
+    });
+
+    // Center brain node
+    ctx.beginPath(); ctx.arc(cx, cy, 10, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(167,139,250,0.9)'; ctx.fill();
+    ctx.beginPath(); ctx.arc(cx, cy, 15, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(167,139,250,0.3)'; ctx.lineWidth = 1; ctx.stroke();
+
+    // Orbiting satellite nodes
+    const nodes = [
+        { label: 'Search', angle: 0,    dist: 55, color: 'rgba(167,139,250,0.8)' },
+        { label: 'Memory', angle: 2.1,  dist: 55, color: 'rgba(196,181,253,0.7)' },
+        { label: 'Verify', angle: 4.2,  dist: 55, color: 'rgba(139,92,246,0.8)'  },
+    ];
+    nodes.forEach(n => {
+        const angle = n.angle + t * 0.4;
+        const nx = cx + Math.cos(angle) * n.dist;
+        const ny = cy + Math.sin(angle) * n.dist;
+        // Line to center
+        ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(nx, ny);
+        ctx.strokeStyle = 'rgba(167,139,250,0.2)'; ctx.lineWidth = 1; ctx.stroke();
+        // Node
+        ctx.beginPath(); ctx.arc(nx, ny, 6, 0, Math.PI * 2);
+        ctx.fillStyle = n.color; ctx.fill();
+        // Label
+        ctx.font = '10px JetBrains Mono, monospace';
+        ctx.fillStyle = 'rgba(167,139,250,0.7)';
+        ctx.textAlign = 'center';
+        ctx.fillText(n.label, nx, ny - 12);
+    });
+
+    // Glow base
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, w * 0.5);
+    g.addColorStop(0, 'rgba(167,139,250,0.08)'); g.addColorStop(1, 'transparent');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, w, h);
+
+    requestAnimationFrame(() => {
+        const canvas = ctx.canvas;
+        if (canvas.isConnected) drawLivemindViz(ctx, canvas.width, canvas.height);
+    });
+}
+
+// Hook LiveMind canvas into initProjectCanvases
+const _origInit = initProjectCanvases;
+function initProjectCanvases() {
+    document.querySelectorAll('.proj-canvas').forEach(canvas => {
+        const type = canvas.dataset.type;
+        const ctx  = canvas.getContext('2d');
+        canvas.width  = canvas.offsetWidth  || 400;
+        canvas.height = canvas.offsetHeight || 180;
+        if (type === 'android')  drawAndroidViz(ctx, canvas.width, canvas.height);
+        if (type === 'ml')       drawMLViz(ctx, canvas.width, canvas.height);
+        if (type === 'fraud')    drawFraudViz(ctx, canvas.width, canvas.height);
+        if (type === 'livemind') drawLivemindViz(ctx, canvas.width, canvas.height);
+    });
+}
+window.addEventListener('load', () => { setTimeout(initProjectCanvases, 200); });
