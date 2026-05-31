@@ -985,3 +985,50 @@ section:not(.home)::before {
     .modal-features { grid-template-columns: 1fr; }
     .modal-header, .modal-body, .modal-footer { padding-left: 2rem; padding-right: 2rem; }
 }
+
+/* ===== LIVEMIND — PURPLE THEME ===== */
+.modal-purple { border-top: 3px solid #a78bfa; }
+.modal-icon.purple { background: rgba(167,139,250,.1); color: #a78bfa; border: 1px solid rgba(167,139,250,.2); }
+.modal-tag.purple  { background: rgba(167,139,250,.1); color: #a78bfa; border: 1px solid rgba(167,139,250,.2); }
+.feat.purple i     { color: #a78bfa; }
+.feat.purple:hover { border-color: #a78bfa; }
+.step.purple span  { color: #a78bfa; }
+.ms.purple  { background: rgba(167,139,250,.08); color: #a78bfa; border: 1px solid rgba(167,139,250,.2); }
+.modal-btn.purple  { background: rgba(167,139,250,.1); color: #a78bfa; border: 1px solid rgba(167,139,250,.3) !important; }
+
+/* Architecture diagram */
+.modal-arch {
+    display: flex; flex-direction: column;
+    align-items: center; gap: .6rem;
+}
+.arch-row { display: flex; justify-content: center; width: 100%; }
+.arch-row.three { gap: 1rem; }
+.arch-box {
+    padding: .7rem 1.6rem; border-radius: .8rem;
+    font-family: var(--font-mono); font-size: 1.2rem; font-weight: 500;
+    text-align: center; border: 1px solid;
+}
+.arch-box.purple       { background: rgba(167,139,250,.1); color: #a78bfa; border-color: rgba(167,139,250,.3); min-width: 20rem; }
+.arch-box.purple-light { background: rgba(167,139,250,.05); color: #c4b5fd; border-color: rgba(167,139,250,.2); flex: 1; }
+.arch-box small        { display: block; font-size: 1rem; opacity: .7; margin-top: .2rem; }
+.arch-arrow            { font-size: 1.4rem; color: var(--muted); }
+
+/* LiveMind card visual */
+.pv-livemind { background: radial-gradient(ellipse at 50% 80%, rgba(167,139,250,.1) 0%, transparent 65%); }
+
+/* Coming soon badge on card */
+.proj-coming-badge {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    font-family: var(--font-mono); font-size: 1.05rem; font-weight: 600;
+    padding: .3rem .9rem; border-radius: 3rem;
+    background: rgba(167,139,250,.15);
+    border: 1px solid rgba(167,139,250,.3);
+    color: #a78bfa; z-index: 2;
+}
+
+/* WIP link style */
+.proj-wip {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-family: var(--font-mono); font-size: 1.25rem;
+    color: var(--muted); opacity: .6;
+}
