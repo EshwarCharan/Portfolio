@@ -208,7 +208,7 @@
                 <p class="tl-grade">CGPA: 7.9</p>
             </div>
         </div>
-           </div>
+    </div>
 </section>
 
 <!-- ACHIEVEMENTS -->
@@ -260,7 +260,7 @@
     <div class="proj-grid">
 
         <!-- Card: Attendance -->
-        <div class="proj-card" data-cat="android">
+        <div class="proj-card" data-cat="android" data-modal="modal-attendance" style="cursor:pointer;">
             <div class="proj-visual pv-android">
                 <canvas class="proj-canvas" data-type="android"></canvas>
                 <div class="proj-glow"></div>
@@ -279,7 +279,7 @@
         </div>
 
         <!-- Card: Green Guard -->
-        <div class="proj-card" data-cat="ml">
+        <div class="proj-card" data-cat="ml" data-modal="modal-greenguard" style="cursor:pointer;">
             <div class="proj-visual pv-ml">
                 <canvas class="proj-canvas" data-type="ml"></canvas>
                 <div class="proj-glow"></div>
@@ -298,7 +298,7 @@
         </div>
 
         <!-- Card: AI TechFec -->
-        <div class="proj-card" data-cat="ml">
+        <div class="proj-card" data-cat="ml" data-modal="modal-techfec" style="cursor:pointer;">
             <div class="proj-visual pv-fraud">
                 <canvas class="proj-canvas" data-type="fraud"></canvas>
                 <div class="proj-glow"></div>
@@ -353,6 +353,140 @@
     <p class="footer-text">Copyright &copy; 2026 by <span>Eshwar Charan Adluri</span> — All Rights Reserved.</p>
     <a href="#home" class="back-top" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
 </footer>
+
+
+<!-- ===== PROJECT MODALS ===== -->
+
+<!-- Green Guard Modal -->
+<div class="modal-overlay" id="modal-greenguard">
+  <div class="modal modal-green">
+    <button class="modal-close"><i class="bx bx-x"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon green"><i class="bx bx-leaf"></i></div>
+      <div>
+        <span class="modal-tag green">ML · NLP · Flask · Web</span>
+        <h2>Green Guard</h2>
+        <p class="modal-subtitle">AI-Powered Greenwashing Detection & CSR Authenticity Verification</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4><i class="bx bx-info-circle"></i> Overview</h4>
+        <p>In the modern digital era, CSR and ESG reporting have become essential for organizational transparency. However, many organizations publish misleading sustainability claims — a practice known as greenwashing — that weakens stakeholder trust and genuine sustainability efforts.</p>
+        <p>GreenGuard AI addresses this by analyzing CSR reports and ESG disclosures using AI, Machine Learning, and NLP to automatically detect greenwashing, generate authenticity scores, and produce verified sustainability analytics.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i class="bx bx-cog"></i> How It Works</h4>
+        <div class="modal-steps">
+          <div class="step green"><span>01</span><div><strong>Upload</strong><p>CSR report uploaded as PDF</p></div></div>
+          <div class="step green"><span>02</span><div><strong>Extract & Process</strong><p>PDF parsing + NLP preprocessing converts unstructured data to machine-readable text</p></div></div>
+          <div class="step green"><span>03</span><div><strong>ML Classification</strong><p>Claims classified as genuine, suspicious, or greenwashed</p></div></div>
+          <div class="step green"><span>04</span><div><strong>Report</strong><p>Authenticity score, confidence level, governance risk indicators generated</p></div></div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <h4><i class="bx bx-star"></i> Key Features</h4>
+        <div class="modal-features">
+          <div class="feat green"><i class="bx bx-check-shield"></i>Automated greenwashing detection</div>
+          <div class="feat green"><i class="bx bx-bar-chart-alt-2"></i>AI authenticity scoring & analytics dashboard</div>
+          <div class="feat green"><i class="bx bx-qr"></i>QR-enabled certificate generation</div>
+          <div class="feat green"><i class="bx bx-link-alt"></i>Blockchain-inspired verification</div>
+          <div class="feat green"><i class="bx bx-bot"></i>GPT-based explanation generation</div>
+          <div class="feat green"><i class="bx bx-shield-alt-2"></i>Centralized admin monitoring</div>
+        </div>
+      </div>
+      <div class="modal-stack-row">
+        <span class="ms green">Python</span><span class="ms green">Flask</span><span class="ms green">NLP</span><span class="ms green">Machine Learning</span><span class="ms green">SQLite</span><span class="ms green">HTML/CSS/JS</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="https://github.com/EshwarCharan/GREENGUARD.git" target="_blank" class="modal-btn green"><i class="bx bxl-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI TechFec Modal -->
+<div class="modal-overlay" id="modal-techfec">
+  <div class="modal modal-blue">
+    <button class="modal-close"><i class="bx bx-x"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon blue"><i class="bx bx-shield-alt-2"></i></div>
+      <div>
+        <span class="modal-tag blue">ML · React.js · Django · Full-Stack</span>
+        <h2>AI TechFec</h2>
+        <p class="modal-subtitle">Integrated Neural Framework for Predictive Personal Finance & Real-Time Anomaly Detection</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4><i class="bx bx-info-circle"></i> Overview</h4>
+        <p>AI TechFec combines advanced ML algorithms — Random Forest, Isolation Forest, and LSTM networks — with a Django backend and React.js dashboard to deliver an end-to-end financial intelligence platform for India's digital payment ecosystem (UPI, NEFT, IMPS, RTGS).</p>
+      </div>
+      <div class="modal-metrics">
+        <div class="metric blue"><div class="m-num">92.4%</div><div class="m-lbl">F1-Score Accuracy</div></div>
+        <div class="metric blue"><div class="m-num">89%</div><div class="m-lbl">Fraud Detection Rate</div></div>
+        <div class="metric blue"><div class="m-num">3.5%</div><div class="m-lbl">False Positive Rate</div></div>
+        <div class="metric blue"><div class="m-num">&lt;50ms</div><div class="m-lbl">Per Transaction</div></div>
+      </div>
+      <div class="modal-section">
+        <h4><i class="bx bx-star"></i> Key Features</h4>
+        <div class="modal-features">
+          <div class="feat blue"><i class="bx bx-category"></i>Automated transaction categorization (10 categories)</div>
+          <div class="feat blue"><i class="bx bx-pulse"></i>Real-time anomaly detection using Isolation Forest</div>
+          <div class="feat blue"><i class="bx bx-trending-up"></i>LSTM-powered budget forecasting</div>
+          <div class="feat blue"><i class="bx bx-detail"></i>Explainable fraud alerts via SHAP feature attribution</div>
+          <div class="feat blue"><i class="bx bx-file"></i>Automated PDF financial report generation</div>
+          <div class="feat blue"><i class="bx bx-devices"></i>No technical expertise required to operate</div>
+        </div>
+      </div>
+      <div class="modal-stack-row">
+        <span class="ms blue">React.js</span><span class="ms blue">Django</span><span class="ms blue">Random Forest</span><span class="ms blue">LSTM</span><span class="ms blue">SHAP</span><span class="ms blue">SQL Server</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="https://github.com/EshwarCharan/AI-TechFec.git" target="_blank" class="modal-btn blue"><i class="bx bxl-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Attendance Modal -->
+<div class="modal-overlay" id="modal-attendance">
+  <div class="modal modal-orange">
+    <button class="modal-close"><i class="bx bx-x"></i></button>
+    <div class="modal-header">
+      <div class="modal-icon orange"><i class="bx bx-calendar-check"></i></div>
+      <div>
+        <span class="modal-tag orange">Android · Java · SQLite</span>
+        <h2>Attendance Manager</h2>
+        <p class="modal-subtitle">Online Student Attendance Management System for Educational Institutions</p>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <h4><i class="bx bx-info-circle"></i> Overview</h4>
+        <p>A mobile application that helps educational institutions maintain accurate attendance records. Teachers and HODs are provided with role-based access to mark, monitor, and report student attendance — eliminating manual errors and reducing administrative workload.</p>
+        <p>The system calculates attendance only for students present during a specific period and provides real-time updates, enabling timely interventions for students with attendance issues.</p>
+      </div>
+      <div class="modal-section">
+        <h4><i class="bx bx-star"></i> Key Features</h4>
+        <div class="modal-features">
+          <div class="feat orange"><i class="bx bx-user-check"></i>Role-based access for Teachers & HODs</div>
+          <div class="feat orange"><i class="bx bx-refresh"></i>Real-time daily attendance updates</div>
+          <div class="feat orange"><i class="bx bx-file-blank"></i>Automated attendance report generation</div>
+          <div class="feat orange"><i class="bx bx-search-alt"></i>Attendance pattern monitoring & insights</div>
+          <div class="feat orange"><i class="bx bx-lock-alt"></i>Unique login credentials per staff member</div>
+          <div class="feat orange"><i class="bx bx-time"></i>Period-wise attendance tracking</div>
+        </div>
+      </div>
+      <div class="modal-stack-row">
+        <span class="ms orange">Java</span><span class="ms orange">XML</span><span class="ms orange">SQLite</span><span class="ms orange">Android Studio</span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="https://github.com/EshwarCharan/Student-attendance-management-system.git" target="_blank" class="modal-btn orange"><i class="bx bxl-github"></i> View on GitHub</a>
+    </div>
+  </div>
+</div>
 
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
